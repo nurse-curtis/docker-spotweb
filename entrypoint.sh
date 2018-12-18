@@ -31,8 +31,10 @@ fi
 if [ -d /var/www/spotweb/cache ]; then
 	rm -rf /var/www/spotweb/cache
 	ln -s /cache /var/www/spotweb/cache
+	chown www-data:www-data /var/www/spotweb/cache /cache
 else
 	ln -s /cache /var/www/spotweb/cache
+	chown www-data:www-data /var/www/spotweb/cache /cache
 fi
 
 TZ=${TZ:-"America/Edmonton"}

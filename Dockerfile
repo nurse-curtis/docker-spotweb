@@ -29,8 +29,7 @@ RUN chmod u+x /entrypoint.sh
 
 COPY files/000-default.conf /etc/apache2/sites-enabled/000-default.conf
 
-VOLUME [ "/config" ]
-VOLUME [ "/cache" ]
+VOLUME /config /cache
 
 EXPOSE 80
 
